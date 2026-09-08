@@ -1,0 +1,95 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "4e7c197bb0c3603e915f",
+  "position": {
+    "x": 768.52207293666027,
+    "y": 369.48176583493279,
+    "z": 6,
+    "height": 263.33973128598848,
+    "width": 571.01727447216888,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_producto"
+                    }
+                  },
+                  "Property": "nombre_producto"
+                }
+              },
+              "queryRef": "dim_producto.nombre_producto",
+              "nativeQueryRef": "nombre_producto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_inventario"
+                    }
+                  },
+                  "Property": "Total_demanda"
+                }
+              },
+              "queryRef": "fact_inventario.Total_demanda",
+              "nativeQueryRef": "Total_demanda"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_inventario"
+                    }
+                  },
+                  "Property": "Total_despacho"
+                }
+              },
+              "queryRef": "fact_inventario.Total_despacho",
+              "nativeQueryRef": "Total_despacho"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_inventario"
+                    }
+                  },
+                  "Property": "Unidades_no_despachadas"
+                }
+              },
+              "queryRef": "fact_inventario.Unidades_no_despachadas",
+              "nativeQueryRef": "Unidades_no_despachadas"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
